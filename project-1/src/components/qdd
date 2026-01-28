@@ -1,0 +1,6 @@
+git init
+git status
+git .add
+git commit -m "first"
+git remote add origin https://github.com/Basitkhan900/E-commrace-1.git
+git push origin main
