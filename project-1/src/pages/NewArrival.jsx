@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Newarrivaldata from '../components/Newarrivaldata'
+import NewArr from '../components/NewArri.jsx'
+import Prods from '../products/Prods.js'
 import Footer from '../components/Footer'
 const NewArrival = () => {
   return (
     <div>
         <Navbar/>
-        <Newarrivaldata/>
+        <NewArr Prods={Prods}/>
         <Footer/>
     </div>
   )

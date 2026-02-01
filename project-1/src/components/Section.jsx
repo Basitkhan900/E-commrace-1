@@ -36,7 +36,7 @@ const Section = () => {
         </p>
 
         <div className="mt-4">
-          <Button />
+          <Button title={'Shop Now'}/>
         </div>
       </div>
     </div>

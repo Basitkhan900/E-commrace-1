@@ -1,13 +1,14 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Newarrivaldata from '../components/Newarrivaldata'
+import MostPop from '../components/Mostpop.jsx'
+import Prods from '../products/Prods.js'
 import Footer from '../components/Footer'
 
 const MostPopular = () => {
   return (
     <div>
         <Navbar/>
-        <Newarrivaldata/>
+        <MostPop Prods={Prods}/>
         <Footer/>
     </div>
   )

@@ -35,7 +35,7 @@ const Aboutsec = () => {
         </p>
 
         <div className="mt-6 flex justify-center md:justify-start">
-          <Button />
+          <Button title={'More About Us'}/>
         </div>
       </div>
     </div>
