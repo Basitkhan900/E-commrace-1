@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 const Carddata = ({ image, disc, oldprice, saleprice, rating, ratingNum }) => {
   return (
     <div className="flex flex-col items-center justify-center w-[95%] my-2">
-      <div className="bg-[rgba(47,47,47,0.69)] w-full  h-80 rounded-4xl p-2 flex items-center justify-center">
+      <div className="  h-80 rounded-4xl p-2 flex items-center justify-center">
         <img src={image} alt="" className="" />
       </div>
       <div className="px-2 mt-1 uppercase">

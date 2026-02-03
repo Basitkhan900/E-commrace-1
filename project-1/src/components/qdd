@@ -1,6 +1,39 @@
+git init          Is folder ko Git repository bana do
+
+git status        Git tumhein batata hai: Kaunsi files hain,Kya tracked hai,Kya change hua ha
+
+git .add          Local code ko Git ke under lao   . means sab files
+
+git commit -m "first"  -m for message Is time par project ki condition save kar lo
+
+git remote add origin https://github.com/Basitkhan900/E-commrace-1.git  for first time upload code on github repo with name
+
+git push origin main      for  push code wit branch name
+
+
+WHEN WE UPDATE CODE
+git add .
+git commit -m "update"
+git push
+
+Formula for git
+First time:
 git init
-git status
-git .add
-git commit -m "first"
-git remote add origin https://github.com/Basitkhan900/E-commrace-1.git
-git push origin main
+git add .
+git commit
+git remote
+git push
+
+Next time:
+git add
+git commit
+git push
+
+Agar kisi or kha code run karna ho github kha
+Friend tumhein GitHub repo ka link dega, jaisa  eg:- https://github.com/username/project-name
+then open gitbash
+git clone https://github.com/username/project-name.git          clone means git clone = online repo ko apne computer par copy karna
+cd project-name  matlab jo project name ho wo likengy
+npm install
+npm run dev  copy link paste into browser
+
