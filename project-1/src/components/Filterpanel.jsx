@@ -32,7 +32,6 @@ const Filterpanel = ({ isOpen, onClose, onApply }) => {
       >
         <h2 className="text-2xl font-bold mb-6">FILTER</h2>
 
-        
         <p className="font-semibold mb-3">Price Range</p>
 
         <div className="relative mb-8">
@@ -55,7 +54,6 @@ const Filterpanel = ({ isOpen, onClose, onApply }) => {
           </div>
         </div>
 
-        
         <p className="font-semibold mb-3">Brand</p>
         <div className="flex gap-2 flex-wrap">
           {BRANDS.map((b) => (
@@ -70,7 +68,6 @@ const Filterpanel = ({ isOpen, onClose, onApply }) => {
           ))}
         </div>
 
-        
         <p className="font-semibold mt-6 mb-3">Size</p>
         <div className="flex gap-2">
           {SIZES.map((s) => (
@@ -85,7 +82,6 @@ const Filterpanel = ({ isOpen, onClose, onApply }) => {
           ))}
         </div>
 
-        
         <p className="font-semibold mt-6 mb-3">Color</p>
         <div className="flex gap-4">
           {COLORS.map((c) => (
@@ -98,7 +94,6 @@ const Filterpanel = ({ isOpen, onClose, onApply }) => {
           ))}
         </div>
 
-        
         <div className="flex gap-3 mt-8">
           <button
             onClick={onClose}

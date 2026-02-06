@@ -9,7 +9,7 @@ import Favorate from './pages/Favorate.jsx'
 import NewArrival from './pages/NewArrival.jsx'
 import MostPopular from './pages/MostPopular.jsx'
 import About from './pages/About.jsx'
-
+import ProductDetail from './components/ProductDetail.jsx'
 
 function App() {
 
@@ -22,6 +22,7 @@ function App() {
         <Route path='/NewArrival' element={<NewArrival/>}/>
         <Route path='/MostPopular' element={<MostPopular/>}/>
         <Route path='/About' element={<About/>}/> 
+        <Route path='/product/:id' element={<ProductDetail/>}/>
     </Routes>
     </>
   )

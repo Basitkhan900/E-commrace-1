@@ -7,27 +7,33 @@ import img8 from "../assets/images/image 10.png";
 
 const imgTitle = [
     {
+        
         image: img3,
         title: "Chappal1",
     },
 
     {
+    
         image: img4,
         title:"Chappal 2",
     },            
     {
+    
         image: img5,
         title:"Chappal 3",
     },            
     {
+    
         image: img6,
         title:"Chappal 4",
     },            
     {
+    
         image: img7,
         title:"Chappal 5",
     },            
     {
+    
         image: img8,
         title:"Chappal 6",
     },            

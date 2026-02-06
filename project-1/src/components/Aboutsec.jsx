@@ -1,8 +1,13 @@
 import React from "react";
 import frm10 from "../assets/images/Frame 39.png";
 import Button from "./Button";
+import { Link , useLocation } from "react-router-dom";
 
 const Aboutsec = () => {
+
+  const location = useLocation();
+  const aboutpage = location.pathname === '/about';
+
   return (
     <div className="flex flex-col md:flex-row items-center justify-evenly gap-8 mt-20 px-4 sm:px-8">
       <div className="w-full md:w-1/2 flex justify-center">
@@ -34,8 +39,11 @@ const Aboutsec = () => {
           at. Malesuada viverra orci ut tellus duis etiam mauris leo volutpat.
         </p>
 
-        <div className="mt-6 flex justify-center md:justify-start">
-          <Button title={'More About Us'}/>
+        <div className="mt-6 flex justify-center  md:justify-start">
+         {!aboutpage && (
+          <Link to={'/about'} className=""><Button 
+          title={'More About Us'}/></Link>
+         )}
         </div>
       </div>
     </div>

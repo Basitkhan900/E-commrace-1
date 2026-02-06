@@ -14,7 +14,8 @@ const Fav = ({Prods}) => {
         {Prods.map((item)=>{
             return(
                     <Carddata 
-                    key={item.id}
+                    id={item.id}
+                    
                     image={item.image}
                     disc={item.disc} 
                     oldprice={item.oldprice} 

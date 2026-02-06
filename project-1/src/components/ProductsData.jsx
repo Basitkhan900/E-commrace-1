@@ -48,6 +48,7 @@ const ProductsData = ({ Prods }) => {
           {filteredProducts.map((item) => (
             <Carddata
               key={item.id}
+              id={item.id}
               image={item.image}
               disc={item.disc}
               oldprice={item.oldprice}

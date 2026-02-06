@@ -14,7 +14,7 @@ git push origin main      for  push code wit branch name
 WHEN WE UPDATE CODE
 git add .
 git commit -m "update"
-git push
+git push origin main
 
 Formula for git
 First time:

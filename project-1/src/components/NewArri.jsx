@@ -1,8 +1,12 @@
 import React from "react";
 import Carddata from "./Carddata";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const NewArr = ({ Prods }) => {
+
+  const navigate = useNavigate();
+
   return (
     <>
       <motion.div
@@ -17,6 +21,7 @@ const NewArr = ({ Prods }) => {
           New Arrival
         </h1>
         <a
+        onClick={() => navigate (`/NewArrival`)}
           href=""
           className="font-bold text-[rgba(255,191,61,1)] text-[20px] uppercase"
         >
@@ -33,12 +38,13 @@ const NewArr = ({ Prods }) => {
         >
           {Prods.slice(0, 4).map((item, index) => (
             <motion.div
-              key={index}
+              key={item.id}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.15 }}
             >
               <Carddata
+                id={item.id}
                 image={item.image}
                 disc={item.disc}
                 oldprice={item.oldprice}

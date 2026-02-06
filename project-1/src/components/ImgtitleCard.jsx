@@ -14,6 +14,7 @@ const ImgtitleCard = ({imgTitles}) => {
                 {imgTitles.map((item)=>{
                     return(
                         <div className="mb-8 flex items-center justify-center w-full flex-col p-4  bg-[rgba(47,47,47,1)] rounded-[40px]">
+                            
                     <img src={item.image} alt="" className='w-[90%] h-92' />
                     <h1 className='uppercase text-white text-2xl font-bold'>{item.title}</h1>
                 </div>
