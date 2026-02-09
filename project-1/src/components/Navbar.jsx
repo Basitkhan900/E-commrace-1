@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/images/Logo.png";
 import { CiSearch, CiShoppingCart, CiUser } from "react-icons/ci";
 import { HiMenu, HiX } from "react-icons/hi";
+import Search from "./Search";
+
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  
+  const [searchopen, setSearchOpen] = useState();
+
   const clicknav = ( { isActive } ) =>      //if we click on any navlink it will active on yellow color
     
     isActive ? "text-amber-400" : "hover:text-amber-400";
@@ -34,9 +37,15 @@ const Navbar = () => {
 
         
         <div className="flex items-center gap-4">
-          <CiSearch size={22} />
-          <CiShoppingCart size={22} />
-          <CiUser size={22} />
+          <CiSearch size={22}
+          onClick={() => setSearchOpen(prev => !prev)}
+          />
+
+
+          <Link to="/cart"> <CiShoppingCart size={22} /></Link>
+
+
+          <Link to={'/profile'}><CiUser size={22} /></Link>
 
           <button
             className="md:hidden text-3xl"
@@ -61,7 +70,9 @@ const Navbar = () => {
           <NavLink onClick={() => setOpen(false)} to="/About" className={clicknav}>About Us</NavLink>
         </div>
       </div>
+      {searchopen && <Search onclose={onclose}/>}
     </header>
+    
   );
 };
 

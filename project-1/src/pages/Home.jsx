@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar.jsx'
 import Header from '../components/Header.jsx'
 import Section from '../components/Section.jsx'
@@ -15,7 +16,12 @@ import customerReviews from '../products/customerReviewsArr.js'
 const Home = () => {
 
   return (
-    <div>
+    <motion.div
+    initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 4, x: 0 }}
+    exit={{ opacity: 0, x: -100 }}
+    transition={{ duration: 0.9 }}
+    >
         <Navbar />
         <Header />
         <ImgtitleCard imgTitles={imgTitle}/>
@@ -26,7 +32,7 @@ const Home = () => {
         <CustomerReview customerReviews={customerReviews}/>
         <Contact/>
         <Footer/>
-    </div>
+    </motion.div>
   )
 }
 

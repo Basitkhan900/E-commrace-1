@@ -1,13 +1,16 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 
 import Prods from "../products/Prods";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 const ProductDetail = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
-
+  
   const product = Prods.find((item) => item.id === Number(id));
 
   if (!product) {
@@ -15,12 +18,14 @@ const ProductDetail = () => {
   }
 
   return (
+    <>
+    <Navbar/>
     <motion.div
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 0.4 }}
-      className="p-4 sm:p-6 md:p-10"
+      className="p-4 sm:p-6 md:p-10 mt-16"
     >
       <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20 lg:ml-[60px]">
         <img
@@ -62,13 +67,13 @@ const ProductDetail = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 ">
-            <button className="px-6 py-2 bg-black text-white w-full sm:w-40 h-12 rounded-full hover:cursor-pointer transition-transform duration-300 hover:scale-105">
+            <Link to={'/cart'}><button className="px-6 py-2 bg-black text-white w-full sm:w-40 h-12 rounded-full hover:cursor-pointer transition-transform duration-300 hover:scale-105">
               Add To Cart
-            </button>
+            </button></Link>
 
-            <button className="px-6 py-2 bg-yellow-400 text-white w-full sm:w-40 h-12 rounded-full hover:cursor-pointer transition-transform duration-300 hover:scale-105">
+           <Link to={'/checkout'}> <button className="px-6 py-2 bg-yellow-400 text-white w-full sm:w-40 h-12 rounded-full hover:cursor-pointer transition-transform duration-300 hover:scale-105">
               Buy Now
-            </button>
+            </button></Link>
           </div>
         </div>
       </div>
@@ -111,6 +116,8 @@ const ProductDetail = () => {
         </p>
       </div>
     </motion.div>
+    <Footer/>
+    </>
   );
 };
 

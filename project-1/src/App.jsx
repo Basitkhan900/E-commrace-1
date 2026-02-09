@@ -10,6 +10,9 @@ import NewArrival from './pages/NewArrival.jsx'
 import MostPopular from './pages/MostPopular.jsx'
 import About from './pages/About.jsx'
 import ProductDetail from './components/ProductDetail.jsx'
+import Cart from './components/Cart.jsx'
+import Checkout from './components/Checkout.jsx'
+import Profile from './components/Profile.jsx'
 
 function App() {
 
@@ -23,6 +26,9 @@ function App() {
         <Route path='/MostPopular' element={<MostPopular/>}/>
         <Route path='/About' element={<About/>}/> 
         <Route path='/product/:id' element={<ProductDetail/>}/>
+        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/checkout' element={<Checkout Page/>}/>
+        <Route path='/profile' element={<Profile/>} />
     </Routes>
     </>
   )
