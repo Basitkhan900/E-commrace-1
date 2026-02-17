@@ -13,6 +13,10 @@ import ProductDetail from './components/ProductDetail.jsx'
 import Cart from './components/Cart.jsx'
 import Checkout from './components/Checkout.jsx'
 import Profile from './components/Profile.jsx'
+import Changepassword from './components/Changepassword.jsx'
+import Sitting from './components/Sitting.jsx'
+import Addanotheradd from './components/Addanotheradd.jsx'
+import Login from './components/Login.jsx'
 
 function App() {
 
@@ -29,6 +33,10 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/checkout' element={<Checkout Page/>}/>
         <Route path='/profile' element={<Profile/>} />
+        <Route path='/changepassword' element={<Changepassword/>}/>
+        <Route path='/sittings' element={<Sitting/>}/>
+        <Route path='/another-address' element={<Addanotheradd/>}/>
+        <Route path='/login' element={< Login/>}/>
     </Routes>
     </>
   )

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/images/Logo.png";
 import { CiSearch, CiShoppingCart, CiUser } from "react-icons/ci";
@@ -8,7 +8,31 @@ import Search from "./Search";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [searchopen, setSearchOpen] = useState();
+  const [searchopen, setSearchOpen] = useState(false);
+
+  const [ count , setCount] = useState(0)      // for icon number inc/dec
+  const getCount = () => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let total = 0;
+    cart.forEach(item => {
+      total += item.quantity;
+
+    });
+      setCount(total)  
+  }
+
+useEffect(() => {
+
+  getCount(); // First load
+
+  window.addEventListener("cartUpdate", getCount);
+
+  return () => {
+    window.removeEventListener("cartUpdate", getCount);
+  };
+
+}, []);
+
 
   const clicknav = ( { isActive } ) =>      //if we click on any navlink it will active on yellow color
     
@@ -18,7 +42,6 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 w-full z-50 bg-black/20 ">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between text-white">
 
-        {/* Logo */}
         <img
           src={logo}
           alt="logo"
@@ -38,11 +61,22 @@ const Navbar = () => {
         
         <div className="flex items-center gap-4">
           <CiSearch size={22}
-          onClick={() => setSearchOpen(prev => !prev)}
+          onClick={() => setSearchOpen(true)}
           />
 
-
-          <Link to="/cart"> <CiShoppingCart size={22} /></Link>
+               
+          <Link to="/cart"> <CiShoppingCart size={22} />
+          
+           {count > 0 && (
+    <span
+      className="absolute top-2 ml-3 bg-yellow-500 text-white
+                 text-xs w-5 h-5 flex items-center justify-center
+                 rounded-full"
+    >
+      {count}
+    </span>
+  )}
+          </Link>
 
 
           <Link to={'/profile'}><CiUser size={22} /></Link>

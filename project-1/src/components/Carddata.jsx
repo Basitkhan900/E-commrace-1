@@ -2,7 +2,7 @@ import React from "react";
 import { FaStar, FaHeart, FaShoppingCart } from "react-icons/fa";
 import {  useNavigate } from "react-router-dom";
 
-const Carddata = ({ id, image, disc, oldprice, saleprice, rating, ratingNum }) => {
+const Carddata = ({ id, image, title, disc, oldprice, saleprice, rating, ratingNum }) => {
 
   const navigate = useNavigate()
 
@@ -62,6 +62,7 @@ const Carddata = ({ id, image, disc, oldprice, saleprice, rating, ratingNum }) =
 
       
       <div className="px-6 mt-1 uppercase">
+        <p className="font-bold">{title}</p>
         <p className="text-[rgba(47,47,47,1)] ">{disc}</p>
 
         <div className="flex items-center justify-between mt-1">

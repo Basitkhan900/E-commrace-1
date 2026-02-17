@@ -50,6 +50,7 @@ const ProductsData = ({ Prods }) => {
               key={item.id}
               id={item.id}
               image={item.image}
+              title={item.title}
               disc={item.disc}
               oldprice={item.oldprice}
               saleprice={item.saleprice}

@@ -7,6 +7,7 @@ const Prods = [
   {
     id: 1,
     image: frm24,
+    title: "CHAPPAL 001",
     disc: 'Denim Peshawari Chappal (NDL x KP Shop Collaboration)',
     oldprice: 5000,
     saleprice: 4500,
@@ -19,6 +20,7 @@ const Prods = [
   {
     id: 2,
     image: frm25,
+    title: "CHAPPAL 002",
     disc: 'Denim Peshawari Chappal (NDL x KP Shop Collaboration)',
     oldprice: 5200,
     saleprice: 4700,
@@ -31,6 +33,7 @@ const Prods = [
   {
     id: 3,
     image: frm26,
+    title: "CHAPPAL 003",
     disc: 'Denim Peshawari Chappal (NDL x KP Shop Collaboration)',
     oldprice: 4800,
     saleprice: 4300,
@@ -43,6 +46,7 @@ const Prods = [
   {
     id: 4,
     image: frm27,
+    title: "CHAPPAL 004",
     disc: 'Denim Peshawari Chappal (NDL x KP Shop Collaboration)',
     oldprice: 5100,
     saleprice: 4600,
@@ -55,6 +59,7 @@ const Prods = [
   {
     id: 5,
     image: frm24,
+    title: "CHAPPAL 001",
     disc: 'Denim Peshawari Chappal (NDL x KP Shop Collaboration)',
     oldprice: 5300,
     saleprice: 4800,
@@ -67,6 +72,7 @@ const Prods = [
   {
     id: 6,
     image: frm25,
+    title: "CHAPPAL 002",
     disc: 'Denim Peshawari Chappal (NDL x KP Shop Collaboration)',
     oldprice: 5000,
     saleprice: 4400,
@@ -79,6 +85,7 @@ const Prods = [
   {
     id: 7,
     image: frm26,
+    title: "CHAPPAL 003",
     disc: 'Denim Peshawari Chappal (NDL x KP Shop Collaboration)',
     oldprice: 4900,
     saleprice: 4200,
@@ -91,6 +98,7 @@ const Prods = [
   {
     id: 8,
     image: frm27,
+    title: "CHAPPAL 004",
     disc: 'Denim Peshawari Chappal (NDL x KP Shop Collaboration)',
     oldprice: 5400,
     saleprice: 4900,
@@ -103,6 +111,7 @@ const Prods = [
   {
     id: 9,
     image: frm24,
+    title: "CHAPPAL 001",
     disc: 'Denim Peshawari Chappal (NDL x KP Shop Collaboration)',
     oldprice: 5600,
     saleprice: 5100,
@@ -115,6 +124,7 @@ const Prods = [
   {
     id: 10,
     image: frm25,
+    title: "CHAPPAL 002",
     disc: 'Denim Peshawari Chappal (NDL x KP Shop Collaboration)',
     oldprice: 4700,
     saleprice: 4100,
@@ -127,6 +137,7 @@ const Prods = [
   {
     id: 11,
     image: frm26,
+    title: "CHAPPAL 003",
     disc: 'Denim Peshawari Chappal (NDL x KP Shop Collaboration)',
     oldprice: 5200,
     saleprice: 4600,
@@ -139,6 +150,7 @@ const Prods = [
   {
     id: 12,
     image: frm27,
+    title: "CHAPPAL 004",
     disc: 'Denim Peshawari Chappal (NDL x KP Shop Collaboration)',
     oldprice: 5500,
     saleprice: 5000,
