@@ -17,12 +17,15 @@ import Changepassword from './components/Changepassword.jsx'
 import Sitting from './components/Sitting.jsx'
 import Addanotheradd from './components/Addanotheradd.jsx'
 import Login from './components/Login.jsx'
+import Signup from './components/Signup.jsx'
 
 function App() {
 
   return (
     <>
     <Routes>
+        <Route path='/signup' element={< Signup/>}/>
+        <Route path='/login' element={< Login/>}/>
         <Route path='/' element={<Home/>}/>
         <Route path='/Products' element={<Products/>}/>
         <Route path='/Favorate' element={<Favorate/>}/>
@@ -36,7 +39,6 @@ function App() {
         <Route path='/changepassword' element={<Changepassword/>}/>
         <Route path='/sittings' element={<Sitting/>}/>
         <Route path='/another-address' element={<Addanotheradd/>}/>
-        <Route path='/login' element={< Login/>}/>
     </Routes>
     </>
   )
